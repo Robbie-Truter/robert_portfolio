@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 
 const GithubIcon = ({ size = 20 }: { size?: number }) => (
   <svg
@@ -41,34 +42,42 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center gap-6">
-          <a
+          <motion.a
             href="mailto:roberttruter7@gmail.com"
             className="text-lofi-muted hover:text-lofi-amber transition-colors"
+            whileHover={{ y: -3, scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
           >
             <Mail size={20} />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="tel:+27760547500"
             className="text-lofi-muted hover:text-lofi-amber transition-colors"
+            whileHover={{ y: -3, scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
           >
             <Phone size={20} />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="https://linkedin.com/in/robbie-truter"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lofi-muted hover:text-lofi-amber transition-colors"
+            whileHover={{ y: -3, scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
           >
             <LinkedinIcon size={20} />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="https://github.com/Robbie-Truter"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lofi-muted hover:text-lofi-amber transition-colors"
+            whileHover={{ y: -3, scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
           >
             <GithubIcon size={20} />
-          </a>
+          </motion.a>
         </div>
       </div>
     </footer>

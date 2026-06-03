@@ -56,7 +56,13 @@ const Projects = () => {
     <section className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-sm font-semibold tracking-[0.2em] text-lofi-amber uppercase mb-12 flex items-center">
-          <span className="w-8 h-px bg-lofi-amber mr-4"></span>
+          <motion.span 
+            className="w-8 h-px bg-lofi-amber mr-4"
+            initial={{ width: 0 }}
+            whileInView={{ width: 32 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          ></motion.span>
           Projects
         </h2>
 
@@ -68,7 +74,8 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group bg-lofi-card/60 backdrop-blur-sm border border-lofi-accent p-8 rounded-2xl hover:border-lofi-amber/30 hover:shadow-[0_8px_30px_rgba(232,168,124,0.08)] transition-all duration-300"
+              whileHover={{ y: -5, transition: { duration: 0.3 } }}
+              className="group bg-lofi-card/60 backdrop-blur-sm border border-lofi-accent p-8 rounded-2xl hover:border-lofi-amber/30 hover:shadow-[0_8px_30px_rgba(232,168,124,0.08)] transition-all duration-300 flex flex-col"
             >
               <div className="flex justify-between items-start mb-6">
                 <div className="p-3 bg-lofi-surface rounded-xl border border-lofi-accent/50">
