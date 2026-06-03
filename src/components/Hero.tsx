@@ -1,39 +1,54 @@
 import { motion } from "framer-motion";
-import { Compass } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-[90vh] flex flex-col justify-center items-center px-6 text-center relative overflow-hidden">
-      {/* Subtle ambient glow behind the content */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-lofi-amber/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 left-1/3 w-[300px] h-[300px] bg-lofi-rose/5 rounded-full blur-3xl" />
+    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+      {/* Background landscape image */}
+      <div className="absolute inset-0">
+        <img
+          src="/hero-landscape.png"
+          alt="Lofi landscape with a winding path at dusk"
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Gradient overlay — blends image into the dark background at the top and bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-lofi-bg via-lofi-bg/70 to-lofi-bg/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-lofi-bg/60 via-transparent to-transparent" />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10"
-      >
+      {/* Content — positioned at the bottom of the hero over the gradient */}
+      <div className="relative z-10 px-6 pb-20 pt-40 max-w-3xl mx-auto w-full">
         <motion.div
-          className="flex justify-center mb-6 text-lofi-amber"
-          animate={{ rotate: [0, 10, -10, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
-          <Compass size={44} strokeWidth={1.2} />
+          <motion.div
+            className="flex items-center gap-2 text-lofi-amber mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            <MapPin size={18} strokeWidth={1.5} />
+            <span className="text-sm tracking-[0.2em] uppercase font-light">
+              Cape Town, South Africa
+            </span>
+          </motion.div>
+
+          <h1 className="text-5xl md:text-7xl font-light tracking-tight text-lofi-text mb-3">
+            Robert Truter
+          </h1>
+
+          <h2 className="text-xl md:text-2xl font-light text-lofi-amber tracking-wide mb-8">
+            Software Developer
+          </h2>
+
+          <p className="max-w-lg text-lofi-muted font-light leading-relaxed text-lg">
+            Building software by day, exploring the world whenever I can. 
+            I write code that works and chase sunsets that don't.
+          </p>
         </motion.div>
-        <h1 className="text-5xl md:text-7xl font-light tracking-tight text-lofi-text mb-4">
-          Robert Truter
-        </h1>
-        <h2 className="text-lg md:text-xl font-light text-lofi-amber tracking-[0.3em] uppercase mb-8">
-          Software Developer
-        </h2>
-        <p className="max-w-lg mx-auto text-lofi-muted font-light leading-relaxed text-lg">
-          Crafting responsive, beautiful digital experiences with a passion for
-          clean code and a curiosity for the world.
-        </p>
-      </motion.div>
+      </div>
     </section>
   );
 };
