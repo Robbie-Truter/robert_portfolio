@@ -4,17 +4,21 @@ import { MapPin } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
-      {/* Background landscape image */}
-      <div className="absolute inset-0">
+      {/* Background landscape image with slow subtle zoom (Ken Burns effect) */}
+      <motion.div
+        className="absolute inset-0"
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+      >
         <img
           src="/hero-landscape.png"
           alt="Lofi landscape with a winding path at dusk"
           className="w-full h-full object-cover object-center"
         />
         {/* Gradient overlay — blends image into the dark background at the top and bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-lofi-bg via-lofi-bg/70 to-lofi-bg/30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-lofi-bg/60 via-transparent to-transparent" />
-      </div>
+        <div className="absolute inset-0 bg-linear-to-t from-lofi-bg via-lofi-bg/70 to-lofi-bg/30" />
+        <div className="absolute inset-0 bg-linear-to-b from-lofi-bg/60 via-transparent to-transparent" />
+      </motion.div>
 
       {/* Content — positioned at the bottom of the hero over the gradient */}
       <div className="relative z-10 px-6 pb-20 pt-40 max-w-3xl mx-auto w-full">
@@ -29,7 +33,12 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <MapPin size={18} strokeWidth={1.5} />
+            <motion.div
+              animate={{ y: [0, -3, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <MapPin size={18} strokeWidth={1.5} />
+            </motion.div>
             <span className="text-sm tracking-[0.2em] uppercase font-light">
               Cape Town, South Africa
             </span>
@@ -44,8 +53,8 @@ const Hero = () => {
           </h2>
 
           <p className="max-w-lg text-lofi-muted font-light leading-relaxed text-lg">
-            Building software by day, exploring the world whenever I can. 
-            I write code that works and chase sunsets that don't.
+            Building software by day, exploring the world whenever I can. I
+            write code that works and chase sunsets that don't.
           </p>
         </motion.div>
       </div>

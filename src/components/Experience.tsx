@@ -32,7 +32,13 @@ const Experience = () => {
     <section className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-sm font-semibold tracking-[0.2em] text-lofi-amber uppercase mb-12 flex items-center">
-          <span className="w-8 h-px bg-lofi-amber mr-4"></span>
+          <motion.span 
+            className="w-8 h-px bg-lofi-amber mr-4"
+            initial={{ width: 0 }}
+            whileInView={{ width: 32 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          ></motion.span>
           Journey
         </h2>
 
@@ -44,14 +50,20 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative pl-8 md:pl-0"
+              className="relative pl-8 md:pl-0 group"
             >
-              <div className="md:grid md:grid-cols-4 md:gap-8 items-baseline">
+              <motion.div 
+                className="md:grid md:grid-cols-4 md:gap-8 items-baseline"
+                whileHover={{ x: 4 }}
+                transition={{ duration: 0.3 }}
+              >
                 <div className="mb-2 md:mb-0 text-sm font-medium text-lofi-rose uppercase tracking-wider md:text-right">
                   {exp.period}
                 </div>
-                <div className="md:col-span-3 md:pl-8 md:border-l border-lofi-accent">
-                  <h3 className="text-xl font-medium text-lofi-text mb-1">
+                <div className="md:col-span-3 md:pl-8 md:border-l border-lofi-accent relative">
+                  {/* Subtle animated dot on the timeline */}
+                  <div className="hidden md:block absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-lofi-accent group-hover:bg-lofi-amber transition-colors duration-300"></div>
+                  <h3 className="text-xl font-medium text-lofi-text mb-1 group-hover:text-lofi-amber transition-colors duration-300">
                     {exp.role}
                   </h3>
                   <div className="text-lofi-amber mb-4 text-sm font-medium">
@@ -61,7 +73,7 @@ const Experience = () => {
                     {exp.desc}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
