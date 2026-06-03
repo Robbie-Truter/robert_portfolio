@@ -31,8 +31,8 @@ const Experience = () => {
   return (
     <section className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-sm font-semibold tracking-[0.2em] text-lofi-matcha uppercase mb-12 flex items-center">
-          <span className="w-8 h-px bg-lofi-matcha mr-4"></span>
+        <h2 className="text-sm font-semibold tracking-[0.2em] text-lofi-amber uppercase mb-12 flex items-center">
+          <span className="w-8 h-px bg-lofi-amber mr-4"></span>
           Journey
         </h2>
 
@@ -47,17 +47,17 @@ const Experience = () => {
               className="relative pl-8 md:pl-0"
             >
               <div className="md:grid md:grid-cols-4 md:gap-8 items-baseline">
-                <div className="mb-2 md:mb-0 text-sm font-medium text-lofi-wood uppercase tracking-wider md:text-right">
+                <div className="mb-2 md:mb-0 text-sm font-medium text-lofi-rose uppercase tracking-wider md:text-right">
                   {exp.period}
                 </div>
                 <div className="md:col-span-3 md:pl-8 md:border-l border-lofi-accent">
                   <h3 className="text-xl font-medium text-lofi-text mb-1">
                     {exp.role}
                   </h3>
-                  <div className="text-lofi-matcha mb-4 text-sm font-medium">
+                  <div className="text-lofi-amber mb-4 text-sm font-medium">
                     {exp.company}
                   </div>
-                  <p className="text-lofi-text/70 font-light leading-relaxed">
+                  <p className="text-lofi-muted font-light leading-relaxed">
                     {exp.desc}
                   </p>
                 </div>

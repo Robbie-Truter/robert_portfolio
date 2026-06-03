@@ -1,22 +1,39 @@
 @import "tailwindcss";
 
 @theme {
-  --color-lofi-bg: #f7f5f0;
-  --color-lofi-text: #2c2c2a;
-  --color-lofi-matcha: #8b9b82;
-  --color-lofi-wood: #a68a6d;
-  --color-lofi-accent: #d8cec4;
+  /* Deep twilight backgrounds */
+  --color-lofi-bg: #1a1b2e;
+  --color-lofi-surface: #232440;
+  --color-lofi-card: #2a2b4a;
+
+  /* Text tones */
+  --color-lofi-text: #e8dfd5;
+  --color-lofi-muted: #9896b0;
+
+  /* Warm amber glow — like lantern light */
+  --color-lofi-amber: #e8a87c;
+  --color-lofi-wood: #d4956a;
+
+  /* Soft pink/rose — like signs and awnings */
+  --color-lofi-rose: #c9879f;
+
+  /* Muted green — like foliage */
+  --color-lofi-matcha: #7c9a72;
+
+  /* Accent borders/dividers */
+  --color-lofi-accent: #3d3e5c;
+
   --font-sans: "Inter", sans-serif;
 }
 
 @layer base {
   body {
-    @apply bg-lofi-bg text-lofi-text font-sans antialiased selection:bg-lofi-matcha selection:text-white transition-colors duration-300;
+    @apply bg-lofi-bg text-lofi-text font-sans antialiased selection:bg-lofi-rose/40 selection:text-white transition-colors duration-300;
   }
 
-  /* Custom scrollbar for better aesthetics */
+  /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   ::-webkit-scrollbar-track {
     background: transparent;
@@ -25,7 +42,7 @@
     @apply bg-lofi-accent rounded-full;
   }
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-lofi-wood;
+    @apply bg-lofi-muted;
   }
 }
 

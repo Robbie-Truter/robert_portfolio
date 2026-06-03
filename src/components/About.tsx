@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="py-24 px-6 bg-white/40">
+    <section className="py-24 px-6 bg-lofi-surface/60">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -10,12 +10,12 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-sm font-semibold tracking-[0.2em] text-lofi-matcha uppercase mb-8 flex items-center">
-            <span className="w-8 h-px bg-lofi-matcha mr-4"></span>
+          <h2 className="text-sm font-semibold tracking-[0.2em] text-lofi-amber uppercase mb-8 flex items-center">
+            <span className="w-8 h-px bg-lofi-amber mr-4"></span>
             About Me
           </h2>
 
-          <div className="space-y-6 text-lofi-text/80 font-light leading-loose text-lg">
+          <div className="space-y-6 text-lofi-muted font-light leading-loose text-lg">
             <p>
               I am a Software Developer with 4 years of experience working
               across the full stack, with a primary focus on frontend

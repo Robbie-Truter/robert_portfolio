@@ -36,20 +36,20 @@ const Footer = () => {
   return (
     <footer className="py-12 border-t border-lofi-accent mt-12">
       <div className="max-w-3xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="text-lofi-text/60 text-sm font-light">
+        <div className="text-lofi-muted text-sm font-light">
           © {new Date().getFullYear()} Robert Truter. All rights reserved.
         </div>
 
         <div className="flex items-center gap-6">
           <a
             href="mailto:roberttruter7@gmail.com"
-            className="text-lofi-text/50 hover:text-lofi-matcha transition-colors"
+            className="text-lofi-muted hover:text-lofi-amber transition-colors"
           >
             <Mail size={20} />
           </a>
           <a
             href="tel:+27760547500"
-            className="text-lofi-text/50 hover:text-lofi-matcha transition-colors"
+            className="text-lofi-muted hover:text-lofi-amber transition-colors"
           >
             <Phone size={20} />
           </a>
@@ -57,7 +57,7 @@ const Footer = () => {
             href="https://linkedin.com/in/robbie-truter"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lofi-text/50 hover:text-lofi-matcha transition-colors"
+            className="text-lofi-muted hover:text-lofi-amber transition-colors"
           >
             <LinkedinIcon size={20} />
           </a>
@@ -65,7 +65,7 @@ const Footer = () => {
             href="https://github.com/Robbie-Truter"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lofi-text/50 hover:text-lofi-matcha transition-colors"
+            className="text-lofi-muted hover:text-lofi-amber transition-colors"
           >
             <GithubIcon size={20} />
           </a>
