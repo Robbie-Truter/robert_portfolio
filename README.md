@@ -2,6 +2,8 @@
 
 > **Software Developer · Full-Stack & AI Tool Integration**
 > Cape Town, South Africa
+>
+> 🌐 **Live Site**: [robbie-truter.github.io/robert_portfolio](https://robbie-truter.github.io/robert_portfolio/)
 
 A portfolio website showcasing 4 years of full-stack software development experience, frontend architecture in React & TypeScript, active work in AI engineering and Model Context Protocol (MCP) integrations, colleague testimonials, and featured projects.
 
@@ -74,4 +76,4 @@ robbie_portfolio/
 
 ## 🌐 Deployment
 
-Designed and configured for deployment via **GitHub Pages**.
+Live at [https://robbie-truter.github.io/robert_portfolio/](https://robbie-truter.github.io/robert_portfolio/). Automatically built and deployed via GitHub Actions on every push to `main`.
