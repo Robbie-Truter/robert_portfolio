@@ -11,7 +11,7 @@ const Hero = () => {
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       >
         <img
-          src="/hero-landscape.png"
+          src={`${import.meta.env.BASE_URL}hero-landscape.png`}
           alt="Lofi landscape with a winding path at dusk"
           className="w-full h-full object-cover object-center"
         />
