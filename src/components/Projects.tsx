@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, MapPin, Map, Plane, Gamepad2 } from "lucide-react";
+import { ExternalLink, Map, Plane, Cpu } from "lucide-react";
 
 const GithubIcon = ({ size = 20 }: { size?: number }) => (
   <svg
@@ -18,17 +18,18 @@ const GithubIcon = ({ size = 20 }: { size?: number }) => (
 
 const projects = [
   {
-    title: "Safe_Route_ZA",
-    status: "In Development",
-    desc: "A safety-focused GPS navigation app specifically designed for South Africans to plan secure travel routes.",
-    icon: <MapPin className="text-lofi-matcha" size={24} />,
-    github: "https://github.com/Robbie-Truter",
-    tags: ["React Native", "TypeScript"],
+    title: "Storage Intelligence",
+    status: "Active Refactor",
+    desc: "A monorepo for intelligent local storage analysis, disk usage profiling, duplicate file detection, and automated safe cleanup workflows via a custom Python FastMCP server.",
+    icon: <Cpu className="text-lofi-amber" size={24} />,
+    github:
+      "https://github.com/Robbie-Truter/storage-intelligence/tree/refactor/monorepo-structure",
+    tags: ["FastMCP", "Python", "MCP Server", "JSON-RPC", "AI Tools"],
   },
   {
     title: "Travel Blog",
     status: "Completed",
-    desc: "A personalized platform to document travel experiences, explore history, and share adventures from around the globe.",
+    desc: "A personalised platform to document travel experiences, explore history, and share adventures from around the globe.",
     icon: <Map className="text-lofi-amber" size={24} />,
     github: "https://github.com/Robbie-Truter",
     tags: ["React", "Tailwind CSS"],
@@ -41,14 +42,6 @@ const projects = [
     github: "https://github.com/Robbie-Truter",
     tags: ["Vue", "Node.js"],
   },
-  {
-    title: "game-backend-cli",
-    status: "Completed",
-    desc: "A command-line interface tool for managing backend game services, handling server configurations and player data.",
-    icon: <Gamepad2 className="text-lofi-amber" size={24} />,
-    github: "https://github.com/Robbie-Truter",
-    tags: ["Node.js", "TypeScript"],
-  },
 ];
 
 const Projects = () => {
@@ -56,7 +49,7 @@ const Projects = () => {
     <section className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-sm font-semibold tracking-[0.2em] text-lofi-amber uppercase mb-12 flex items-center">
-          <motion.span 
+          <motion.span
             className="w-8 h-px bg-lofi-amber mr-4"
             initial={{ width: 0 }}
             whileInView={{ width: 32 }}
@@ -91,7 +84,9 @@ const Projects = () => {
                     <GithubIcon size={20} />
                   </a>
                   <a
-                    href="#"
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-lofi-muted hover:text-lofi-amber transition-colors"
                   >
                     <ExternalLink size={20} />
@@ -104,9 +99,9 @@ const Projects = () => {
                   <h3 className="text-xl font-medium text-lofi-text">
                     {project.title}
                   </h3>
-                  {project.status === "In Development" && (
-                    <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-1 bg-lofi-matcha/15 text-lofi-matcha rounded-full">
-                      WIP
+                  {project.status === "Active Refactor" && (
+                    <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-1 bg-lofi-amber/15 text-lofi-amber rounded-full">
+                      Active
                     </span>
                   )}
                 </div>

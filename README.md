@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+# Robert Truter — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Software Developer · Full-Stack & AI Tool Integration**
+> Cape Town, South Africa
 
-Currently, two official plugins are available:
+A portfolio website showcasing 4 years of full-stack software development experience, frontend architecture in React & TypeScript, active work in AI engineering and Model Context Protocol (MCP) integrations, colleague testimonials, and featured projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Built with a curated lofi-dusk aesthetic featuring smooth micro-animations, glassmorphism, and responsive design.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features & Sections
 
-## Expanding the ESLint configuration
+- **Hero Section**: Atmospheric dusk landscape visual with Ken Burns ambient motion, crisp professional positioning statement, and Cape Town geolocation badge.
+- **About Me**: CV-aligned engineering narrative accompanied by three interactive pillar cards:
+  - _Engineering Core_ (React, TypeScript, component architecture)
+  - _AI & Tool Integration Focus_ (Model Context Protocol, FastMCP, LLM APIs)
+  - _Global Perspective_ (Authentic travel mindset driving adaptability and visual thinking)
+- **Journey (Experience)**: Complete career timeline from Freelance CV Design through Intern, Junior, and Software Developer roles at +OneX, complete with detailed project impact bullets (RPS & TRIMS at Adams & Adams).
+- **Toolkit (Skills)**: Four structured category cards with dedicated badges:
+  - _AI & Automation_: MCP, FastMCP, Claude & Gemini APIs, Ollama, Copilot, Power Automate, n8n
+  - _Software Development_: TypeScript, React, Vue, React Native, Node.js, Express, Python, Tailwind CSS, TanStack Query/Table, Zustand, shadcn/ui
+  - _Database & Infrastructure_: PostgreSQL, SQL, Supabase, Prisma, MongoDB
+  - _Dev Tools & Practices_: GitHub Actions, Git, Azure DevOps, Figma
+- **Featured Projects**: Curated showcase with live repository links and stack tags:
+  - **Storage Intelligence**: Python FastMCP server monorepo for intelligent local storage analysis, disk usage profiling, duplicate file detection, and cleanup workflows.
+  - **Travel Blog**: Interactive travel and history documenting platform.
+  - **travel_management_app**: Full-stack trip logistics and itinerary planning tool.
+- **Testimonials**: Colleague recommendations from **Hendri Le Grange** (Database Developer) and **Mathys Basson** (Frontend Developer) detailing cross-stack collaboration, ownership, and technical leadership on RPS and TRIMS, featuring animated "Read Full Testimonial" expandable views.
+- **Contact & Footer**: Verified direct channels for Email, Phone, LinkedIn, and GitHub.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Motion & Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📁 Project Structure
+
+```text
+robbie_portfolio/
+├── public/
+│   ├── favicon.svg
+│   └── hero-landscape.png      # High-res atmospheric hero visual
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── About.tsx           # Narrative & 3 engineering pillars
+│   │   ├── Experience.tsx      # Career timeline & bullet achievements
+│   │   ├── Footer.tsx          # Contact links & copyright
+│   │   ├── Hero.tsx            # Header, tagline & ambient motion
+│   │   ├── Projects.tsx        # Curated project cards & links
+│   │   ├── Skills.tsx          # Categorised skills toolkit
+│   │   └── Testimonials.tsx    # Expandable peer recommendation cards
+│   ├── pages/
+│   │   └── Home.tsx            # Main page assembly
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css               # Lofi color tokens & theme configuration
+│   └── main.tsx
+├── index.html                  # SEO & Open Graph meta tags
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🌐 Deployment
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Designed and configured for deployment via **GitHub Pages**.

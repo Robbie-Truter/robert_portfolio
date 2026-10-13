@@ -43,28 +43,31 @@ const Footer = () => {
 
         <div className="flex items-center gap-6">
           <motion.a
-            href="mailto:roberttruter7@gmail.com"
+            href="mailto:roberttruter1@gmail.com"
             className="text-lofi-muted hover:text-lofi-amber transition-colors"
             whileHover={{ y: -3, scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            aria-label="Email Robert Truter"
           >
             <Mail size={20} />
           </motion.a>
           <motion.a
-            href="tel:+27760547500"
+            href="tel:+27790547909"
             className="text-lofi-muted hover:text-lofi-amber transition-colors"
             whileHover={{ y: -3, scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            aria-label="Call Robert Truter"
           >
             <Phone size={20} />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/in/robbie-truter"
+            href="https://linkedin.com/in/robert-truter"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lofi-muted hover:text-lofi-amber transition-colors"
             whileHover={{ y: -3, scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            aria-label="Robert Truter on LinkedIn"
           >
             <LinkedinIcon size={20} />
           </motion.a>
@@ -75,6 +78,7 @@ const Footer = () => {
             className="text-lofi-muted hover:text-lofi-amber transition-colors"
             whileHover={{ y: -3, scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            aria-label="Robbie-Truter on GitHub"
           >
             <GithubIcon size={20} />
           </motion.a>

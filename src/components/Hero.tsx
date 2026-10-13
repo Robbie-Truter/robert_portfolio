@@ -49,12 +49,13 @@ const Hero = () => {
           </h1>
 
           <h2 className="text-xl md:text-2xl font-light text-lofi-amber tracking-wide mb-8">
-            Software Developer
+            Software Developer · Full-Stack &amp; AI Tool Integration
           </h2>
 
           <p className="max-w-lg text-lofi-muted font-light leading-relaxed text-lg">
-            Building software by day, exploring the world whenever I can. I
-            write code that works and chase sunsets that don't.
+            Designing and building resilient frontend architectures, scalable web
+            applications, and context-aware AI tools with Model Context Protocol
+            (MCP).
           </p>
         </motion.div>
       </div>

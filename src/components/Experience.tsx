@@ -4,26 +4,43 @@ const experiences = [
   {
     role: "Software Developer",
     company: "+OneX",
-    period: "Oct 2023 - Present",
-    desc: "Lead frontend development of two production web applications using React and TypeScript. Owned the frontend from initial concept to successful launch, focusing on clean architecture and responsive design.",
+    type: "Full-time",
+    period: "Mar 2024 – Present",
+    bullets: [
+      "Led frontend development of two production applications (RPS and TRIMS at Adams & Adams) using React and TypeScript.",
+      "Built automated workflows using Copilot and Power Automate to streamline ticket logging, daily standup summaries, and alerts.",
+      "Built rich user interfaces with TanStack Query, TanStack Table, ShadCN, and custom state management.",
+      "Engineered client-side routing, responsive layouts, and aligned RESTful APIs with database teams.",
+    ],
   },
   {
     role: "Junior Software Developer",
-    company: "+OneX (Contract)",
-    period: "April 2023 - Sept 2023",
-    desc: "Developed interactive UI features from scratch using Vue. Optimized and refactored code to improve performance and usability.",
+    company: "+OneX",
+    type: "Contract",
+    period: "Apr 2023 – Mar 2024",
+    bullets: [
+      "Developed interactive UI features and components from scratch using Vue.",
+      "Maintained Node.js/Express REST APIs and optimised database schemas with SQL.",
+      "Built unit test suites and integrated component libraries like Ant Design.",
+    ],
   },
   {
     role: "Intern Software Developer",
-    company: "+OneX (Internship)",
-    period: "April 2022 - April 2023",
-    desc: "Developed reusable UI components using React, contributing to core product updates and delivering a highly stable, error-free user experience.",
+    company: "+OneX",
+    type: "Internship",
+    period: "Apr 2022 – Apr 2023",
+    bullets: [
+      "Built reusable React components, resolved component bugs, and accelerated development using React Table & React Forms.",
+    ],
   },
   {
-    role: "Freelance Web Design",
+    role: "Freelance CV Design",
     company: "Self-Employed",
-    period: "Jan 2022 - April 2022",
-    desc: "Designed visually compelling and professional UI layouts for freelance clients, optimizing information hierarchy and readability.",
+    type: "Freelance",
+    period: "Jan 2022 – Apr 2022",
+    bullets: [
+      "Crafted visually compelling, professional CV layouts for clients, optimising hierarchy and typography.",
+    ],
   },
 ];
 
@@ -32,7 +49,7 @@ const Experience = () => {
     <section className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-sm font-semibold tracking-[0.2em] text-lofi-amber uppercase mb-12 flex items-center">
-          <motion.span 
+          <motion.span
             className="w-8 h-px bg-lofi-amber mr-4"
             initial={{ width: 0 }}
             whileInView={{ width: 32 }}
@@ -52,16 +69,21 @@ const Experience = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="relative pl-8 md:pl-0 group"
             >
-              <motion.div 
+              <motion.div
                 className="md:grid md:grid-cols-4 md:gap-8 items-baseline"
                 whileHover={{ x: 4 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="mb-2 md:mb-0 text-sm font-medium text-lofi-rose uppercase tracking-wider md:text-right">
-                  {exp.period}
+                <div className="mb-3 md:mb-0 md:text-right">
+                  <div className="text-sm font-medium text-lofi-rose uppercase tracking-wider">
+                    {exp.period}
+                  </div>
+                  <div className="text-xs text-lofi-muted/60 mt-1 font-light">
+                    {exp.type}
+                  </div>
                 </div>
                 <div className="md:col-span-3 md:pl-8 md:border-l border-lofi-accent relative">
-                  {/* Subtle animated dot on the timeline */}
+                  {/* Animated dot on the timeline */}
                   <div className="hidden md:block absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-lofi-accent group-hover:bg-lofi-amber transition-colors duration-300"></div>
                   <h3 className="text-xl font-medium text-lofi-text mb-1 group-hover:text-lofi-amber transition-colors duration-300">
                     {exp.role}
@@ -69,9 +91,17 @@ const Experience = () => {
                   <div className="text-lofi-amber mb-4 text-sm font-medium">
                     {exp.company}
                   </div>
-                  <p className="text-lofi-muted font-light leading-relaxed">
-                    {exp.desc}
-                  </p>
+                  <ul className="space-y-2">
+                    {exp.bullets.map((bullet, bIdx) => (
+                      <li
+                        key={bIdx}
+                        className="flex gap-3 text-lofi-muted font-light leading-relaxed text-sm"
+                      >
+                        <span className="mt-2 w-1 h-1 rounded-full bg-lofi-amber/60 shrink-0" />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             </motion.div>
